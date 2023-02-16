@@ -6,7 +6,7 @@ Mini-projet avec le framework django
 2. Installez pip en tapant `python get-pip.py`.
 3. Accédez au répertoire du projet:
 ```bash
-cd nom_du_projet
+>> cd nom_du_projet
 ```
 4. Lancez cette appllication django en tapant `py manage.py runserver` dans un terminal.
 5. Rendez-vous dans le navigateur et entrer l'adresse: `127.0.0.1:800`.
