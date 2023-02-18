@@ -22,6 +22,9 @@
 	                    <h5 class="card-title text-center pb-0 fs-4">Create an Account</h5>
 	                  </div>
 
+	                  {% if error %}
+	                  	<div class="alert-danger">{{message}}</div>
+	                  {% endif %}
 	                  <form class="row g-3 needs-validation" action="{% url 'signup' %}" method="POST">
 	                  	{% csrf_token %}
 	                    <div class="col-12">
