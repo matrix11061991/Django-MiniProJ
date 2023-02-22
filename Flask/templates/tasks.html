@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ma todolist</title>
+</head>
+<body>
+    <h1>Liste des tâches :</h1>
+    <ul>
+        {% for task in tasks %}
+        <li>{{ task }}</li>
+        {% endfor %}
+    </ul>
+    <form method="POST" action="{{ url_for('add_task') }}">
+        <input type="text" name="task">
+        <input type="submit" value="Ajouter">
+    </form>
+</body>
+</html>
