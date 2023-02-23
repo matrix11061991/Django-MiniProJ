@@ -23,34 +23,41 @@
 	                  </div>
 
 	                  {% if error %}
-	                  	<div class="alert-danger">{{message}}</div>
+	                  	<div class="alert alert-danger" role="alert">{{message}}</div>
 	                  {% endif %}
 	                  <form class="row g-3 needs-validation" action="{% url 'signup' %}" method="POST">
 	                  	{% csrf_token %}
 	                    <div class="col-12">
-	                      <label for="username" class="form-label">Your username</label>
-	                      <input type="text" name="username" class="form-control" id="username" required>
-	                      <div class="invalid-feedback">Please, enter your username!</div>
+	                    	<div class="input-group has-validation">
+	                      		<span class="input-group-text" id="inputGroupPrepend">🆄</span>
+	                      		<input type="text" name="username" class="form-control" id="username" placeholder="Your Username" required>
+	                      		<div class="invalid-feedback">Please, enter your username!</div>
+	                      	</div>
 	                    </div>
+	                    
+
 	                    <div class="col-12">
-	                      <label for="yourEmail" class="form-label">Your Email</label>
-	                      <input type="email" name="useremail" class="form-control" id="yourEmail" required>
-	                      <div class="invalid-feedback">Please enter a valid Email address!</div>
+	                      	<div class="input-group has-validation">
+	                        	<span class="input-group-text" id="inputGroupPrepend">🅵</span>
+	                        	<input type="text" name="firstname" class="form-control" id="firstname" placeholder="Your Firstname" required>
+	                        	<div class="invalid-feedback">Please choose a pseudonyme.</div>
+	                      	</div>
 	                    </div>
 
 	                    <div class="col-12">
-	                      <label for="yourUsername" class="form-label">Pseudo</label>
-	                      <div class="input-group has-validation">
-	                        <span class="input-group-text" id="inputGroupPrepend">@</span>
-	                        <input type="text" name="userpseudo" class="form-control" id="yourPseudo" required>
-	                        <div class="invalid-feedback">Please choose a pseudonyme.</div>
-	                      </div>
+	                    	<div class="input-group has-validation">
+		                    	<span class="input-group-text" id="inputGroupPrepend">✉</span>
+		                      	<input type="email" name="useremail" class="form-control" id="yourEmail" placeholder="Your Email" required>
+		                      	<div class="invalid-feedback">Please enter a valid Email address!</div>
+		                    </div>
 	                    </div>
 
 	                    <div class="col-12">
-	                      <label for="password" class="form-label">Password</label>
-	                      <input type="password" name="password" class="form-control" id="password" required>
-	                      <div class="invalid-feedback">Please enter your password!</div>
+	                    	<div class="input-group has-validation">
+	                    		<span class="input-group-text" id="inputGroupPrepend">🔐</span>
+		                      	<input type="password" name="password" class="form-control" id="password" required>
+		                      	<div class="invalid-feedback">Please enter your password!</div>
+		                    </div>
 	                    </div>
 
 	                    <div class="col-12">
